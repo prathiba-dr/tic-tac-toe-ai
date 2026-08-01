@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic-Tac-Toe AI: Minimax vs Q-Learning</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Tic-Tac-Toe AI</h1>
+    <p class="subtitle">Play against a perfect minimax solver, or a Q-learning agent trained from scratch via 150,000 self-play games. No frameworks, no build step - plain HTML/CSS/DOM.</p>
+
+    <section class="controls">
+      <div class="control-group">
+        <label>Opponent</label>
+        <select id="opponent-select">
+          <option value="minimax">Minimax (perfect play)</option>
+          <option value="qlearning">Q-learning (trained agent)</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label>Play as</label>
+        <select id="mark-select">
+          <option value="1">X (first move)</option>
+          <option value="-1">O (second move)</option>
+        </select>
+      </div>
+      <button id="new-game-btn">New Game</button>
+    </section>
+
+    <p id="status" class="status">Your turn.</p>
+
+    <div id="board" class="board"></div>
+
+    <section class="scoreboard">
+      <div><span id="score-win">0</span><label>Wins</label></div>
+      <div><span id="score-draw">0</span><label>Draws</label></div>
+      <div><span id="score-loss">0</span><label>Losses</label></div>
+    </section>
+
+    <section class="compare">
+      <button id="compare-btn">Watch Minimax vs Q-learning</button>
+      <p id="compare-status" class="status"></p>
+    </section>
+
+    <footer>
+      <p>Q-table trained via self-play, validated to never lose a single game to the minimax player across all opening moves and both roles (X/O) - see <code>training/</code> in the repo. Source: <a href="https://github.com/prathiba-dr/tic-tac-toe-ai" target="_blank" rel="noopener">GitHub</a>.</p>
+    </footer>
+  </main>
+
+  <script src="game-logic.js"></script>
+  <script src="minimax.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
