@@ -1,0 +1,3 @@
+Q-learning agent (greedy) vs perfect minimax, 18 games (both roles x all 9 forced opponent opening moves):
+{ qWins: 0, draws: 18, qLosses: 0 }
+PASS: Q-learning agent never lost to the perfect player.
