@@ -4,7 +4,7 @@ A lightweight, dependency-free tic-tac-toe game with two AI opponents -
 perfect-play minimax, and a Q-learning agent trained from scratch via
 self-play - so you can play either one, or watch them play each other.
 
-**Live demo**: _add your GitHub Pages URL here after enabling Pages (see below)_
+**Live demo**: https://prathiba-dr.github.io/tic-tac-toe-ai/
 
 ## Why two opponents
 
@@ -98,8 +98,7 @@ node training/train_qlearning.js
 node training/validate.js
 ```
 
-## Enabling the live demo link
+## Deployment
 
-This repo's `docs/` folder is meant to be served via GitHub Pages
-(Settings -> Pages -> Deploy from branch -> `main` / `docs`). Once enabled,
-the URL is `https://<username>.github.io/tic-tac-toe-ai/`.
+Served via GitHub Pages directly from `docs/` on `master` - no build step,
+what's committed is what's live.
